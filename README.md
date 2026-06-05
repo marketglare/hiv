@@ -2,7 +2,6 @@
 HIV Simulator
 
 This is a simulator of HIV, a disease caused by viral replication.
-
 Goal: Minimize the impact of the infectious agent.
 
 Rules: The pathogen attempts to replicate and attacks CD4.
@@ -15,3 +14,5 @@ If you miss a dose, the virus regains its strength.
 
 Win condition: -
 Loss condition: CD4 <50
+
+Important! This is a compressed model! Time flows faster for game dynamics.
