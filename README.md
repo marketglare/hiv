@@ -1,6 +1,6 @@
 # hiv
-HIV Simulator
 
+An interactive game showing why it's important to start HIV treatment on time. Administer medication and defeat the virus.
 This is a simulator of HIV, a disease caused by viral replication.
 Goal: Minimize the impact of the infectious agent.
 
