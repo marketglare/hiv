@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>HIV Simulator</title>
+<meta name="description" content="An interactive game showing why it's important to start HIV treatment on time. Administer medication and defeat the virus">
+<meta name="keywords" content="hiv, treatment, simulator, game, health, aids">
 <style>
 :root{--bg:#07121a;--hud:#0b1a22;--accent:#ff6b6b;--text:#e6f6ff;--muted:#6f8b92}
 html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:system-ui,Segoe UI,Roboto,Arial}
@@ -450,7 +452,7 @@ startBtn.addEventListener('click', ()=> {
 artBtn.addEventListener('click', ()=> { if(!state.running) return; pressART(); });
 
 /* ---------- Languages (modal) ---------- */
-const LOCALES = { ru:{name:'Русский'}, en:{name:'English'}, de:{name:'Deutsch'}, fr:{name:'Français'}, es:{name:'Español'}, zh:{name:'中文'}, tr:{name:'Türkçe'}, ja:{name:'日本語'} };
+const LOCALES = { en:{name:'English'}, fr:{name:'Français'}, es:{name:'Español'}, de:{name:'Deutsch'}, ru:{name:'Русский'}, tr:{name:'Türkçe'}, zh:{name:'中文'} , ja:{name:'日本語'} };
 let ACTIVE_LOCALE = state.currentLang;
 langsBtn.addEventListener('click', ()=> {
  const buttons = Object.keys(LOCALES).map(code => {
@@ -495,8 +497,15 @@ function applyLocale(){
 donateBtn.addEventListener('click', ()=> {
  const txt = [
  "USDT (TRC-20) address: TSR63AMR4ToAyhFvGsBJ4C8ikAeM6Fn5TT",
- "SHIB (ERC-20) address: 0x4C97c50666a5553326d2289e2dD683dE30145A33",
- "Email: marketglare@gmail.com"
+   "SHIB (ERC-20) address: 0x4C97c50666a5553326d2289e2dD683dE30145A33",
+   "",
+   "Why crypto?",
+   "— Anonymous (no one will recognize you)",
+   "— Instant (no banks)",
+   "— Global (from any country)",
+   "— It's cheap now! Your donation carries more weight.",
+   "",
+   "Email: marketglare@gmail.com (en/ru)"
  ].join("\n");
  showModal("<h2>"+escapeHtml(t('donate_label'))+"</h2><pre style='white-space:pre-wrap'>"+escapeHtml(txt)+"</pre>");
 });
